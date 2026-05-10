@@ -1,0 +1,19 @@
+REM Astra Ghost Writer
+DELAY 5000
+GUI r
+DELAY 800
+STRING notepad
+ENTER
+DELAY 1500
+STRING Hello... is anyone there?
+ENTER
+DELAY 1000
+STRING I can see you through the webcam.
+ENTER
+DELAY 1000
+STRING Just kidding. It's Astra.
+ENTER
+DELAY 500
+STRING ----------------------------------
+ENTER
+STRING SYSTEM OPTIMIZATION COMPLETE.

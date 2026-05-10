@@ -1,0 +1,9 @@
+REM Astra Voice Takeover
+DELAY 5000
+GUI r
+DELAY 800
+STRING powershell -NoP -Exec Bypass
+ENTER
+DELAY 2000
+STRING $s = New-Object -ComObject SAPI.SpVoice; $s.Speak('Warning. Astra Kernel has detected a breach in your focus. Please stand by for total system optimization.'); exit
+ENTER

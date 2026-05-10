@@ -1,0 +1,10 @@
+REM Astra System Purge
+DELAY 5000
+GUI r
+DELAY 800
+STRING powershell -NoP -Exec Bypass
+ENTER
+DELAY 1500
+REM Focus is locked, now execute the purge
+STRING Get-Process | Where-Object {$_.MainWindowTitle} | ForEach-Object { $_.CloseMainWindow() }; exit
+ENTER

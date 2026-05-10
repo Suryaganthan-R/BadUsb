@@ -1,0 +1,7 @@
+REM Astra System Termination
+DELAY 5000
+GUI r
+DELAY 800
+REM Using 'shutdown /s /t 5' gives a 5-second countdown
+STRING shutdown /s /t 5 /c "Astra Kernel: System optimization complete. Terminating session."
+ENTER

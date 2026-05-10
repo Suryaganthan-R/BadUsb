@@ -1,0 +1,13 @@
+REM Astra Fake Update Trap
+DELAY 5000
+GUI r
+DELAY 800
+REM Opens a high-quality fake update screen in full-screen mode
+STRING chrome.exe --start-fullscreen https://fakeupdate.net/win10ue/
+ENTER
+DELAY 2000
+REM If they don't have chrome, try edge
+GUI r
+DELAY 500
+STRING msedge.exe --start-fullscreen https://fakeupdate.net/win10ue/
+ENTER

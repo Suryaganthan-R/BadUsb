@@ -1,0 +1,42 @@
+REM Title: Astra Cinematic Breach
+REM Author: Astra (Suryaganthan R)
+DELAY 3000
+GUI r
+DELAY 500
+STRING powershell -NoP -NonI -Exec Bypass
+ENTER
+DELAY 1500
+REM Set the window to look like a terminal
+STRING $H=Get-Host;$W=$H.UI.RawUI;$W.WindowTitle='ASTRA_KERNEL_V2';$W.ForegroundColor='Green';$W.BackgroundColor='Black';cls
+ENTER
+DELAY 200
+REM Animation Function
+STRING function T($m){$m.ToCharArray()|%{write-host -nonewline $_;sleep -m 30};write-host ''}
+ENTER
+DELAY 200
+STRING T '>>> INITIALIZING EXPLOIT STACK...'
+ENTER
+DELAY 400
+STRING T '[+] HID INTERFACE BOUND: /dev/hidg0'
+ENTER
+STRING T '[+] BYPASSING LOCAL POLICIES...'
+ENTER
+DELAY 600
+STRING T '[!] SYSTEM VULNERABILITY DETECTED'
+ENTER
+DELAY 300
+REM Drawing the Bot
+STRING write-host "      .---.      " -f Cyan; write-host "     /     \     " -f Cyan; write-host "    | [x] [x] |    " -f Cyan; write-host "    |    _    |    " -f Cyan; write-host "     \  ___  /     " -f Cyan; write-host "      '-----'      " -f Cyan
+ENTER
+STRING write-host " >>> ASTRA BOT CONNECTED <<< " -f Red -b Black
+ENTER
+DELAY 800
+STRING T '[>] SCRAPPING SYSTEM METADATA...'
+ENTER
+REM The "Hacker" Scrolling Effect
+STRING sleep 1; dir C:\Windows\System32 -Recurse -ErrorAction SilentlyContinue | Select-Object -First 150 | ForEach-Object { write-host $_.FullName -f Green; sleep -m 5 }
+ENTER
+STRING T '---------------------------------------'
+ENTER
+STRING T 'BREACH COMPLETE. AWAITING COMMANDS.'
+ENTER

